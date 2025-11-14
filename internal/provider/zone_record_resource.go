@@ -82,15 +82,15 @@ func (r *zoneRecordResource) Metadata(_ context.Context, req resource.MetadataRe
 // Schema defines the schema for the resource.
 func (r *zoneRecordResource) Schema(_ context.Context, _ resource.SchemaRequest, resp *resource.SchemaResponse) {
 	resp.Schema = schema.Schema{
-		Description: "Manages a DNS zone record in Loopia.",
+		Description: "Manages a DNS zone record.",
 		Attributes: map[string]schema.Attribute{
 			"domain": schema.StringAttribute{
-				Required:    true,
 				Description: "The domain name to create records for.",
+				Required:    true,
 			},
 			"subdomain": schema.StringAttribute{
-				Required:    true,
 				Description: "The subdomain to create records for.",
+				Required:    true,
 			},
 			"record": schema.SingleNestedAttribute{
 				Description: "The DNS record to manage.",

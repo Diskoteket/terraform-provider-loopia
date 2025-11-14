@@ -52,40 +52,40 @@ func (d *zoneRecordsDataSource) Metadata(_ context.Context, req datasource.Metad
 // Schema defines the schema for the data source.
 func (d *zoneRecordsDataSource) Schema(_ context.Context, _ datasource.SchemaRequest, resp *datasource.SchemaResponse) {
 	resp.Schema = schema.Schema{
-		Description: "Fetches DNS zone records for a specific domain and subdomain from Loopia.",
+		Description: "Fetches DNS zone records for a specific domain and subdomain",
 		Attributes: map[string]schema.Attribute{
 			"domain": schema.StringAttribute{
-				Required:    true,
 				Description: "The domain name to retrieve records for.",
+				Required:    true,
 			},
 			"subdomain": schema.StringAttribute{
-				Required:    true,
 				Description: "The subdomain to retrieve records for.",
+				Required:    true,
 			},
 			"zone_records": schema.ListNestedAttribute{
-				Computed:    true,
 				Description: "List of DNS zone records.",
+				Computed:    true,
 				NestedObject: schema.NestedAttributeObject{
 					Attributes: map[string]schema.Attribute{
 						"type": schema.StringAttribute{
-							Computed:    true,
 							Description: "The type of the record (e.g., 'A', 'CNAME', 'MX').",
+							Computed:    true,
 						},
 						"ttl": schema.Int32Attribute{
-							Computed:    true,
 							Description: "Time-to-live for the record in seconds.",
+							Computed:    true,
 						},
 						"priority": schema.Int32Attribute{
-							Computed:    true,
 							Description: "The priority for MX records.",
+							Computed:    true,
 						},
 						"value": schema.StringAttribute{
-							Computed:    true,
 							Description: "The value of the record. For an 'A' record, this is an IPv4 address.",
+							Computed:    true,
 						},
 						"record_id": schema.Int32Attribute{
-							Computed:    true,
 							Description: "The unique identifier for the record.",
+							Computed:    true,
 						},
 					},
 				},

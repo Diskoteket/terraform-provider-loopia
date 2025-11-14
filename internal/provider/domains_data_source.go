@@ -52,28 +52,35 @@ func (d *DomainsDataSource) Metadata(_ context.Context, req datasource.MetadataR
 // Schema defines the schema for the data source.
 func (d *DomainsDataSource) Schema(_ context.Context, _ datasource.SchemaRequest, resp *datasource.SchemaResponse) {
 	resp.Schema = schema.Schema{
+		Description: "Fetches details about all domains",
 		Attributes: map[string]schema.Attribute{
 			"domains": schema.ListNestedAttribute{
 				Computed: true,
 				NestedObject: schema.NestedAttributeObject{
 					Attributes: map[string]schema.Attribute{
 						"name": schema.StringAttribute{
-							Computed: true,
+							Description: "The domain name",
+							Computed:    true,
 						},
 						"paid": schema.BoolAttribute{
-							Computed: true,
+							Description: "Wether the domain is pad for",
+							Computed:    true,
 						},
 						"registered": schema.BoolAttribute{
-							Computed: true,
+							Description: "Whether the domain is registered",
+							Computed:    true,
 						},
 						"renewal_status": schema.StringAttribute{
-							Computed: true,
+							Description: "The renewal status of the domain",
+							Computed:    true,
 						},
 						"expiration_date": schema.StringAttribute{
-							Computed: true,
+							Description: "The expiration date of the domain",
+							Computed:    true,
 						},
 						"reference_number": schema.Int32Attribute{
-							Computed: true,
+							Description: "The reference number of the domain",
+							Computed:    true,
 						},
 					},
 				},

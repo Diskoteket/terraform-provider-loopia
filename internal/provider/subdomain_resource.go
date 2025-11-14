@@ -45,6 +45,7 @@ func (r *subdomainResource) Metadata(_ context.Context, req resource.MetadataReq
 // Schema defines the schema for the resource.
 func (r *subdomainResource) Schema(_ context.Context, _ resource.SchemaRequest, resp *resource.SchemaResponse) {
 	resp.Schema = schema.Schema{
+		Description: "Fetches details about a specific subdomain",
 		Attributes: map[string]schema.Attribute{
 			"domain": schema.StringAttribute{
 				Description: "The domain name to create the subdomain for",

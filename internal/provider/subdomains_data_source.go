@@ -44,15 +44,16 @@ func (d *SubdomainsDataSource) Metadata(_ context.Context, req datasource.Metada
 // Schema defines the schema for the data source.
 func (d *SubdomainsDataSource) Schema(_ context.Context, _ datasource.SchemaRequest, resp *datasource.SchemaResponse) {
 	resp.Schema = schema.Schema{
+		Description: "Fetches details about all subdomains.",
 		Attributes: map[string]schema.Attribute{
 			"domain": schema.StringAttribute{
-				Required:    true,
 				Description: "The domain name to retrieve subdomains for",
+				Required:    true,
 			},
 			"subdomains": schema.ListAttribute{
+				Description: "List of subdomain names",
 				Computed:    true,
 				ElementType: types.StringType,
-				Description: "List of subdomain names",
 			},
 		},
 	}

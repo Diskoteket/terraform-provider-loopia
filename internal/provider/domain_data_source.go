@@ -50,28 +50,28 @@ func (d *DomainDataSource) Schema(_ context.Context, _ datasource.SchemaRequest,
 		Description: "Fetches details about a specific domain.",
 		Attributes: map[string]schema.Attribute{
 			"name": schema.StringAttribute{
-				Required:    true,
 				Description: "The domain name to retrieve data for",
+				Required:    true,
 			},
 			"paid": schema.BoolAttribute{
-				Computed:    true,
 				Description: "Whether the domain is paid for",
+				Computed:    true,
 			},
 			"registered": schema.BoolAttribute{
-				Computed:    true,
 				Description: "Whether the domain is registered",
+				Computed:    true,
 			},
 			"renewal_status": schema.StringAttribute{
-				Computed:    true,
 				Description: "The renewal status of the domain",
+				Computed:    true,
 			},
 			"expiration_date": schema.StringAttribute{
-				Computed:    true,
 				Description: "The expiration date of the domain",
+				Computed:    true,
 			},
 			"reference_number": schema.Int32Attribute{
-				Computed:    true,
 				Description: "The reference number of the domain",
+				Computed:    true,
 			},
 		},
 	}
