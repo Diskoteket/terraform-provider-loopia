@@ -6,7 +6,7 @@ require (
 	github.com/diskoteket/loopia-go v0.0.0-20251113151206-1f0c5b199630
 	github.com/hashicorp/terraform-plugin-framework v1.16.1
 	github.com/hashicorp/terraform-plugin-go v0.29.0
-	github.com/hashicorp/terraform-plugin-log v0.9.0
+	github.com/hashicorp/terraform-plugin-log v0.10.0
 	github.com/hashicorp/terraform-plugin-testing v1.13.3
 )
 
