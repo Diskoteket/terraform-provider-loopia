@@ -6,7 +6,7 @@ description: |-
 ---
 
 # Loopia Provider
-This is an inofficial Terraform provider to interact with the [Loopia XML-RPC API](https://www.loopia.se/api/) and it's resources.
+This is an unofficial Terraform provider to interact with the [Loopia XML-RPC API](https://www.loopia.se/api/) and it's resources.
 
 ## Getting started
 1. Log in to the customer zone at [https://loopia.se](https://loopia.se)

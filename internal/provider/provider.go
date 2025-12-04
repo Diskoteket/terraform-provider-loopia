@@ -70,9 +70,6 @@ func (p *LoopiaProvider) Configure(ctx context.Context, req provider.ConfigureRe
 		return
 	}
 
-	// If practitioner provided a configuration value for any of the
-	// attributes, it must be a known value.
-
 	if config.Username.IsUnknown() {
 		resp.Diagnostics.AddAttributeError(
 			path.Root("username"),

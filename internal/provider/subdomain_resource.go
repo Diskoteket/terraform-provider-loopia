@@ -87,9 +87,6 @@ func (r *subdomainResource) Create(ctx context.Context, req resource.CreateReque
 		return
 	}
 
-	// Map response directly to state
-	//state.Domain = types.StringValue()
-
 	// Set state to fully populated data
 	diags = resp.State.Set(ctx, plan)
 	resp.Diagnostics.Append(diags...)
